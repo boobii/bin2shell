@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cat $* | od --address-radix=n --format=x1 - | sed -e 's/^/"/' -e 's/$/"/' -e 's/ /\\x/g'
